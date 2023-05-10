@@ -221,14 +221,15 @@ function ShareSocial(props: IndexPropsType) {
             </div>
 
             <div className={classes.copyContainer} style={style?.copyContainer}>
-                <div className={classes.copyUrl} data-testid="url">
+                <div className={classes.copyUrl} style={style?.copyUrl} data-testid="url">
                     {url}
                 </div>
                 <div className={classes.copyIcon}
+                    style={style?.copyIcon}
                     data-testid="copy-btn"
                     onClick={() => copyToClipboard(url)}
                 >
-                    <p> {isCopied ? 'Copied' : 'Copy'} </p>
+                    <p style={{marginBottom: "0"}} > {isCopied ? 'Copied' : 'Copy'} </p>
                 </div>
             </div>
         </div>
